@@ -43,14 +43,12 @@ h1 {
 /*
  * Styling cards deck
 */
-
 .deck {
   width: 660px;
   min-height: 680px;
   background: linear-gradient(360deg, #fbd72b 0%, #f9484a 100%);
   padding: 32px;
   border-radius: 10px;
-  box-shadow: 5px 5px 20px 0 rgba(255, 255, 255, 0.23);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -73,7 +71,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 5px 20px 0 #000;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
 
 .card.open {
@@ -90,4 +88,37 @@ h1 {
   background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
   font-size: 33px;
   transition: all 0.5s;
+}
+
+/*
+ * Styling the Score Panel
+ */
+.score-panel {
+  color: white;
+  text-align: left;
+  width: 345px;
+  margin-bottom: 10px;
+}
+
+.stars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+
+.stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+.timer {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.restart {
+  color: white;
+  float: right;
+  cursor: pointer;
 }
