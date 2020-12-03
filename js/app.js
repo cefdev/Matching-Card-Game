@@ -87,7 +87,7 @@ function cardClicked() {
   }
 }
 
-// checkMatch(): Check if the two opened cards are matched or not
+// Check if the two opened cards are matched or not
 function checkMatch() {
   // Distructure the openedCards array and assign each card in a variable
   let [firstCard, secondCard] = openedCards;
@@ -111,13 +111,13 @@ function checkMatch() {
   // If player Win
   if (closedCards.length == 0) {
     // Open winning panel
-    // openWinPanel();
+    openWinPanel();
     // Stop timer
     stopTimer();
   }
 }
 
-// updateScore(): update the score, the stars rating
+// Update the score and stars rating
 function updateScore() {
   // Increase num of moves after flipping two cards up and display it in the UI
   numOfMoves += 1;
@@ -165,7 +165,31 @@ function stopTimer() {
   clearInterval(timerhandler);
 }
 
-// openWinPanel(): Display the winning panel
+// Display the winning panel
+function openWinPanel() {
+  let popupTime = document.querySelector(".winning-panel_timer");
+  let popupStars = document.querySelector(".winning-panel_stars");
+
+  // display the popup
+  winningPanel.style.display = "block";
+
+  // Display the score
+  popupTime.textContent = `${minutes}:${seconds}`;
+
+  if (numOfStars == 3) {
+    popupStars.innerHTML =
+      '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>';
+  } else if (numOfStars == 2) {
+    popupStars.innerHTML =
+      '<i class="fa fa-star"></i><i class="fa fa-star"></i>';
+  } else if (numOfStars == 1) {
+    popupStars.innerHTML = '<i class="fa fa-star"></i>';
+  }
+
+  // Change restart button color to green
+  restartBtn.style.color = "green";
+}
+
 // Logic to restart the game after winning or from the panel (Using Restart button)
 
 // Run init function in the begining of the game
