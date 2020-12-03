@@ -15,7 +15,7 @@
 * If the cards match, both cards stay flipped over.
 * If the cards do not match, both cards are flipped face down.
 * The game ends once all cards have been correctly matched.
-* Once the game ends a modal will appear, containing the total timer a
+* Once the game ends a modal will appear, containing the total timer the player took to finish the game.
 * The user can click the restart button to restart the game.
 
 
