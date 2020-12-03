@@ -4,6 +4,7 @@ let movesElement = document.querySelector(".moves");
 let starsElement = document.querySelector(".stars");
 let winningPanel = document.querySelector(".winning-panel");
 let restartBtn = document.querySelector(".restart");
+let winPanelRestart = document.querySelector(".btn-play-again");
 let timer = document.querySelector(".timer");
 let icons = [];
 let openedCards = [];
@@ -191,6 +192,8 @@ function openWinPanel() {
 }
 
 // Logic to restart the game after winning or from the panel (Using Restart button)
+restartBtn.addEventListener("click", init);
+winPanelRestart.addEventListener("click", init);
 
 // Run init function in the begining of the game
 window.addEventListener("load", init);
