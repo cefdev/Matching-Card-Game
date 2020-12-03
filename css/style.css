@@ -76,7 +76,7 @@ h1 {
 
 .open {
   transform: rotateY(180deg);
-  background-color: #000;
+  background: #000;
   cursor: default;
   font-size: 33px;
   transition: all 0.5s;
