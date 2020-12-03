@@ -54,6 +54,19 @@ function init() {
   });
 }
 
+// Shuffle icons and assign them to each card
+function shuffleCards() {
+  // Shuffle the icons
+  icons = icons.sort(() => Math.random() - 0.5);
+
+  // Assign them to each card
+  let i = 0;
+  cardList.forEach((card) => {
+    card.children[0].className = icons[i];
+    i++;
+  });
+}
+
 // cardClicked(): Do some logic when a card is being clicked
 // checkMatch(): Check if the two opened cards are matched or not
 // updateScore(): update the score, the stars rating
