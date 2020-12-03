@@ -70,8 +70,29 @@ function shuffleCards() {
 // cardClicked(): Do some logic when a card is being clicked
 // checkMatch(): Check if the two opened cards are matched or not
 // updateScore(): update the score, the stars rating
-// startTimer()
-// stopTimer()
+
+// Timer ON functionality
+function startTimer() {
+  if (!timerhandler) {
+    timerhandler = setInterval(() => {
+      second += 1;
+      if (second > 59) {
+        second = 0;
+        minute += 1;
+      }
+
+      second < 10
+        ? (timer.innerHTML = `0${minute}:0${second}`)
+        : (timer.innerHTML = `0${minute}:${second}`);
+    }, 1000);
+  }
+}
+
+// Timer OFF functionality
+function stopTimer() {
+  clearInterval(timerhandler);
+}
+
 // openWinPanel(): Display the winning panel
 // Logic to restart the game after winning or from the panel (Using Restart button)
 
