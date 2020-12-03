@@ -73,7 +73,7 @@ function cardClicked() {
   startTimer();
 
   // Push the clicked card into the openedCards array if:
-  if (openedCards.length < 2 && !this.classList.contains("show")) {
+  if (openedCards.length < 2 && !this.classList.contains("open")) {
     this.classList.add("open");
 
     // Push the opened card into the openedCards array
