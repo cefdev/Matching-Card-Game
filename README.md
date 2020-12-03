@@ -25,6 +25,7 @@
 * CSS
 * JavaScript
 * [Font Awesome](https://fontawesome.com/)
+* [FontGet](https://www.fontget.com/discover/among-us/)
 
 
 ## Author
