@@ -106,7 +106,7 @@ function checkMatch() {
   let closedCards = document.querySelectorAll(".card:not(.match)");
 
   // Update the score panel
-  //updateScore();
+  updateScore();
 
   // If player Win
   if (closedCards.length == 0) {
@@ -118,6 +118,30 @@ function checkMatch() {
 }
 
 // updateScore(): update the score, the stars rating
+function updateScore() {
+  // Increase num of moves after flipping two cards up and display it in the UI
+  numOfMoves += 1;
+  movesElement.textContent = numOfMoves;
+
+  // clear the openedCards array
+  openedCards = [];
+
+  // Check stars rating
+  if (numOfMoves <= 14) {
+    numOfStars = 3;
+  } else if (numOfMoves > 14 && numOfMoves <= 20) {
+    numOfStars = 2;
+  } else if (numOfMoves > 20) {
+    numOfStars = 1;
+  }
+
+  // Update stars rating UI
+  if (numOfStars == 2) {
+    starsElement.children[2].style.display = "none";
+  } else if (numOfStars == 1) {
+    starsElement.children[1].style.display = "none";
+  }
+}
 
 // Timer ON functionality
 function startTimer() {
