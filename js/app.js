@@ -46,12 +46,12 @@ function init() {
     // Collect available icons names
     icons.push(card.children[0].className);
 
-    // Shuffle cards
-    shuffleCards();
-
     // If card clicked
-    card.addEventListener("click", cardClicked);
+    //card.addEventListener("click", cardClicked);
   });
+
+  // Shuffle cards
+  shuffleCards();
 }
 
 // Shuffle icons and assign them to each card
