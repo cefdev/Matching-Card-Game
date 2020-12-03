@@ -82,12 +82,41 @@ function cardClicked() {
     // if openedCard length == 2:
     if (openedCards.length == 2) {
       // run checkMatch function after 0.7 seconds to let the user see the second clicked card icon clearly before it flip down
-      // setTimeout(checkMatch, 700);
+      setTimeout(checkMatch, 700);
     }
   }
 }
 
 // checkMatch(): Check if the two opened cards are matched or not
+function checkMatch() {
+  // Distructure the openedCards array and assign each card in a variable
+  let [firstCard, secondCard] = openedCards;
+
+  // If the opened cards are matched, Apply "match" class to them
+  if (firstCard.children[0].className == secondCard.children[0].className) {
+    firstCard.classList.add("match");
+    secondCard.classList.add("match");
+  } else {
+    // if opened cards are NOT matched, remove "open" class
+    firstCard.classList.remove("open");
+    secondCard.classList.remove("open");
+  }
+
+  // Collect remaining facedown cards
+  let closedCards = document.querySelectorAll(".card:not(.match)");
+
+  // Update the score panel
+  //updateScore();
+
+  // If player Win
+  if (closedCards.length == 0) {
+    // Open winning panel
+    // openWinPanel();
+    // Stop timer
+    stopTimer();
+  }
+}
+
 // updateScore(): update the score, the stars rating
 
 // Timer ON functionality
