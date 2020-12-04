@@ -189,6 +189,9 @@ function openWinPanel() {
 
   // Change restart button color to green
   restartBtn.style.color = "green";
+
+  // Play winning sound effect
+  playSound();
 }
 
 // Logic to restart the game after winning or from the panel (Using Restart button)
@@ -197,3 +200,10 @@ winPanelRestart.addEventListener("click", init);
 
 // Run init function in the begining of the game
 window.addEventListener("load", init);
+
+// Winning sound effect functionality
+function playSound() {
+  const audio = document.querySelector(".audio");
+  // Play the audio
+  audio.play();
+}
