@@ -32,10 +32,6 @@
 
 /* SMALL MOBILE VIEW */
 @media screen and (max-width: 520px) {
-    body {
-        background-position: bottom !important;
-    }
-
     .deck {
         width: 365px !important;
         min-height: 415px !important;
@@ -52,7 +48,7 @@
         margin-bottom: 55px !important;
     }
 
-    .header {
-        margin: 20px 0px !important;
+    .primary-header {
+        margin: 10px 0 5px 18px !important;
     }
 }
