@@ -1,0 +1,58 @@
+/* TAB VIEW */
+@media screen and (max-width: 740px) {
+    .deck {
+        width: 550px !important;
+        min-height: 600px !important;
+        padding: 25px !important;
+    }
+
+    .card {
+        height: 115px !important;
+        width: 115px !important;
+    }
+}
+
+/* LARGE MOBILE VIEW */
+@media screen and (max-width: 600px) {
+    .deck {
+        width: 500px !important;
+        min-height: 550px !important;
+        padding: 22px !important;
+    }
+
+    .card {
+        height: 100px !important;
+        width: 100px !important;
+    }
+    
+    .score-panel {
+        margin-bottom: 20px !important;
+    }
+}
+
+/* SMALL MOBILE VIEW */
+@media screen and (max-width: 520px) {
+    body {
+        background-position: bottom !important;
+    }
+
+    .deck {
+        width: 365px !important;
+        min-height: 415px !important;
+        padding: 7px !important;
+    }
+
+    .card {
+        height: 85px !important;
+        width: 85px !important;
+    }
+
+    .score-panel {
+        margin-top: 17px !important;
+        margin-bottom: 55px !important;
+    }
+
+    .header {
+        margin: 20px 0px !important;
+    }
+}

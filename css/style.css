@@ -1,3 +1,5 @@
+@import './mediaQueries.css';
+
 @font-face {
   font-family: "AmongUsFont";
   src: url("../fonts/AmongUsFont.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
@@ -24,6 +26,7 @@ body {
 body {
   background-image: url("../img/body_background.jpg");
   font-family: cursive;
+  background-position: top;
 }
 
 .container {
