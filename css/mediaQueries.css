@@ -51,4 +51,10 @@
     .primary-header {
         margin: 10px 0 5px 18px !important;
     }
+
+    .winning-panel {
+        height: 365px !important;
+        width: 365px !important;
+        padding: 0 !important;
+    }
 }
