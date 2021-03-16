@@ -164,6 +164,7 @@ function startTimer() {
 // Timer OFF functionality
 function stopTimer() {
   clearInterval(timerhandler);
+  timerhandler = undefined;
 }
 
 // Display the winning panel
@@ -175,7 +176,10 @@ function openWinPanel() {
   winningPanel.style.display = "block";
 
   // Display the score
-  popupTime.textContent = `${minutes}:${seconds}`;
+  let timerResult =
+    seconds < 10 ? "0" + minutes + ":0" + seconds : `0${minutes}:${seconds}`;
+
+  popupTime.textContent = timerResult;
 
   if (numOfStars == 3) {
     popupStars.innerHTML =
